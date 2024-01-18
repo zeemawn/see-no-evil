@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "See No Evil",
+  "version": "1.0",
+  "description": "A chrome-extension to hide articles on news pages containing certain keywords.",
+  "permissions": ["activeTab", "storage"],
+  "browser_action": {
+    "default_icon": {
+      "16": "16.png",
+      "48": "48.png",
+      "128": "128.png"
+    },
+    "default_title": "See No Evil",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
